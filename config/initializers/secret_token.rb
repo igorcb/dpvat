@@ -26,4 +26,4 @@ def secure_token
   end
 end
 
-Transport::Application.config.secret_key_base = secure_token
+Dpvat::Application.config.secret_key_base = secure_token
