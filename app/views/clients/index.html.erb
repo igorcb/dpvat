@@ -1,0 +1,35 @@
+<div class="panel panel-default">
+  <div class="panel-heading">Listing Client</div>
+  <div class="panel-body">
+    <%= link_to 'New Client', new_client_path, class: "btn btn-primary btn-lg btn-block" %>
+    <div class="table-responsive">
+      <table class="table table-striped">
+        <thead>
+          <tr>
+            <th>Nome</th>
+            <th>Cpf</th>
+            <th>RG</th>
+            <th>Estado</th>
+            <th>Cidade</th>
+            <th colspan="3">Opções</th>
+          </tr>
+        </thead>
+
+        <tbody>
+          <% @clients.each do |client| %>
+            <tr>
+              <td><%= link_to truncate(client.nome, length: 25), client, title: client.nome %></td>
+              <td><%= link_to "#{client.cpf}", client %></td>
+              <td><%= link_to "#{client.rg}", client %></td>
+              <td><%= client.estado %></td>
+              <td><%= client.cidade %></td>
+              <td><%= link_to 'Show', client, class: "btn btn-info btn-xs" %></td>
+              <td><%= link_to 'Edit', edit_client_path(client), class: "btn btn-primary btn-xs" %></td>
+              <td><%= link_to 'Delete', client, method: :delete, data: { confirm: 'Are you sure?' }, class: "btn btn-danger btn-xs" %></td>
+            </tr>
+          <% end %>
+        </tbody>
+      </table>
+    </div>    
+  </div>
+</div>

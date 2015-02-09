@@ -1,0 +1,74 @@
+<div class="panel panel-default">
+  <div class="panel-heading">
+    <h2 class="panel-title">Dados do Cliente</h2>
+  </div>
+
+  <div class="panel-body">
+
+
+    <p>
+      <strong>Nome:</strong>
+      <%= @client.nome %>
+    </p>
+
+    <p>
+      <strong>Endereco:</strong>
+      <%= @client.endereco %> - <%= @client.numero %>
+    </p>
+
+    <p>
+      <strong>Complemento:</strong>
+      <%= @client.complemento %>
+    </p>
+
+    <p>
+      <strong>Bairro:</strong>
+      <%= @client.bairro %>
+    </p>
+
+    <p>
+      <strong>Cidade:</strong>
+      <%= @client.cidade %>
+    </p>
+
+    <p>
+      <strong>Estado:</strong>
+      <%= @client.estado %>
+    </p>
+
+    <p>
+      <strong>Cep:</strong>
+      <%= @client.cep %>
+    </p>
+
+    <p>
+      <strong>Sexo:</strong>
+      <%= @client.sexo %>
+    </p>
+
+    <p>
+      <strong>Estado civil:</strong>
+      <%= @client.estado_civil %>
+    </p>
+
+    <p>
+      <strong>Data nascimento:</strong>
+      <%= @client.data_nascimento %>
+    </p>
+
+    <p>
+      <strong>Cpf:</strong>
+      <%= @client.cpf %>
+    </p>
+
+    <p>
+      <strong>Rg:</strong>
+      <%= @client.rg %>
+    </p>
+  </div>
+</div>
+
+<div class="form-group">
+  <%= link_to "Edit", edit_client_path(@client), class: "btn btn-primary" %>
+  <%= link_to 'Back', clients_path, class: "btn btn-default" %>
+</div>

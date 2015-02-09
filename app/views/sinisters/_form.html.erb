@@ -1,0 +1,54 @@
+<%= form_for(@sinister) do |f| %>
+  <%= render 'shared/error_messages', object: f.object %>
+
+  <div class="form-group">
+    <%= f.label :client_id %><br>
+    <%= f.select(:client_id, Client.order(:nome).collect {|c| [c.nome, c.id]}, {include_blank: true}, {class: "form-control"} ) %>
+  </div>
+  <div class="form-group">
+    <%= f.label :data %><br>
+    <%= f.text_field :data, class: "form-control" %>
+  </div>
+  <div class="form-group">
+    <%= f.label :sinistro %><br>
+    <%= f.text_field :sinistro, class: "form-control" %>
+  </div>
+  <div class="form-group">
+    <%= f.label :data_acidente %><br>
+    <%= f.text_field :data_acidente, class: "form-control" %>
+  </div>
+  <div class="form-group">
+    <%= f.label :seguradora %><br>
+    <%= f.text_field :seguradora, class: "form-control" %>
+  </div>
+  <div class="form-group">
+    <%= f.label :valor %><br>
+    <%= f.text_field :valor, class: "form-control" %>
+  </div>
+  <div class="form-group">
+    <%= f.label :comissao_percentual %><br>
+    <%= f.text_field :comissao_percentual, class: "form-control" %>
+  </div>
+  <div class="form-group">
+    <%= f.label :comissao %><br>
+    <%= f.text_field :comissao, class: "form-control" %>
+  </div>
+  <div class="form-group">
+    <%= f.label :data_recebimento %><br>
+    <%= f.text_field :data_recebimento, class: "form-control" %>
+  </div>
+  <div class="form-group">
+    <%= f.label :valor_recebido %><br>
+    <%= f.text_field :valor_recebido, class: "form-control" %>
+  </div>
+  <div class="form-group">
+    <%= f.label :status %><br>
+    <%= f.select( :status, select_status, {include_blank: "Selecione o Estado"}, {class: "form-control"} ) %>      
+  </div>
+  <div class="actions">
+    <%= f.submit 'Salvar', class: "btn btn-primary" %>
+  </div>
+  <div class="form-group">
+    <%= link_to "Listar Todos", sinisters_path, class: "btn btn-default btn-block" %>
+  </div>
+<% end %>

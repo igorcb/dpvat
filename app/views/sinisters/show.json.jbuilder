@@ -1,0 +1,1 @@
+json.extract! @sinister, :id, :client_id, :data, :date, :sinistro, :data_acidente, :seguradora, :valor, :comissao_percentual, :comissao, :data_recebimento, :valor_recebido, :status, :created_at, :updated_at

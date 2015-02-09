@@ -1,0 +1,68 @@
+<div class="panel panel-default">
+  <div class="panel-heading">
+    <h2 class="panel-title">Dados do Sinitros</h2>
+  </div>
+
+  <div class="panel-body">
+
+    <p>
+      <strong>Client:</strong>
+      <%= @sinister.client.nome %>
+    </p>
+
+    <p>
+      <strong>Data:</strong>
+      <%= @sinister.data %>
+    </p>
+
+    <p>
+      <strong>Sinistro:</strong>
+      <%= @sinister.sinistro %>
+    </p>
+
+    <p>
+      <strong>Data acidente:</strong>
+      <%= @sinister.data_acidente %>
+    </p>
+
+    <p>
+      <strong>Seguradora:</strong>
+      <%= @sinister.seguradora %>
+    </p>
+
+    <p>
+      <strong>Valor:</strong>
+      <%= @sinister.valor %>
+    </p>
+
+    <p>
+      <strong>Comissao percentual:</strong>
+      <%= @sinister.comissao_percentual %>
+    </p>
+
+    <p>
+      <strong>Comissao:</strong>
+      <%= @sinister.comissao %>
+    </p>
+
+    <p>
+      <strong>Data recebimento:</strong>
+      <%= @sinister.data_recebimento %>
+    </p>
+
+    <p>
+      <strong>Valor recebido:</strong>
+      <%= @sinister.valor_recebido %>
+    </p>
+
+    <p>
+      <strong>Status:</strong>
+      <%= @sinister.status_name %>
+    </p>
+  </div>
+</div>
+
+<div class="form-group">
+  <%= link_to "Edit", edit_sinister_path(@sinister), class: "btn btn-primary" %>
+  <%= link_to 'Back', sinisters_path, class: "btn btn-default" %>
+</div>

@@ -1,0 +1,29 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  client_id: 
+  data: MyString
+  date: MyString
+  sinistro: MyString
+  data_acidente: 2015-02-09
+  seguradora: MyString
+  valor: 9.99
+  comissao_percentual: 9.99
+  comissao: 9.99
+  data_recebimento: 2015-02-09
+  valor_recebido: 9.99
+  status: 1
+
+two:
+  client_id: 
+  data: MyString
+  date: MyString
+  sinistro: MyString
+  data_acidente: 2015-02-09
+  seguradora: MyString
+  valor: 9.99
+  comissao_percentual: 9.99
+  comissao: 9.99
+  data_recebimento: 2015-02-09
+  valor_recebido: 9.99
+  status: 1

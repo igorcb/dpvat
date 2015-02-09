@@ -1,0 +1,65 @@
+<%= form_for @client, html: {multipart: true, role: "form" } do |f| %>
+  <%= render 'shared/error_messages', object: f.object %>
+
+  <div class="form-group">
+    <%= f.label :nome %>
+    <%= f.text_field :nome, class: "form-control" %>
+  </div>
+  <div class="form-group">
+    <%= f.label :endereco %>
+    <%= f.text_field :endereco, class: "form-control" %>
+  </div>
+  <div class="form-group">
+    <%= f.label :numero %>
+    <%= f.text_field :numero, class: "form-control" %>
+  </div>
+  <div class="form-group">
+    <%= f.label :complemento %>
+    <%= f.text_field :complemento, class: "form-control" %>
+  </div>
+  <div class="form-group">
+    <%= f.label :bairro %>
+    <%= f.text_field :bairro, class: "form-control" %>
+  </div>
+  <div class="form-group">
+    <%= f.label :cidade %>
+    <%= f.text_field :cidade, class: "form-control" %>
+  </div>
+  <div class="form-group">
+    <%= f.label :estado  %>
+    <%= f.select( :estado, select_uf, {include_blank: "Selecione o Estado"}, {class: "form-control"} ) %>      
+  </div>
+  <div class="form-group">
+    <%= f.label :cep %>
+    <%= f.text_field :cep, class: "form-control" %>
+  </div>
+  <div class="form-group">
+    <%= f.label :cpf %>
+    <%= f.text_field :cpf, class: "form-control"  %>
+  </div>
+  <div class="form-group">
+    <%= f.label :rg %>
+    <%= f.text_field :rg, class: "form-control"  %>
+  </div>
+  <div class="form-group">
+    <%= f.label :data_nascimento  %><br />
+    <%= f.text_field :data_nascimento, class: "form-control"  %>
+  </div>
+  <div class="form-group">
+    <%= f.label :sexo  %>
+    <%= f.select( :sexo, select_sexo, {include_blank: "Selecione o Sexo"}, {class: "form-control"} ) %>      
+  </div>
+  <div class="form-group">
+    <%= f.label :estado_civil  %>
+    <%= f.select( :estado_civil, select_estado_civil, {include_blank: "Selecione o Estado Civil"}, {class: "form-control"} ) %>      
+  </div>
+ 
+  <div class="actions">
+    <%= f.submit 'Salvar', class: "btn btn-primary" %>
+  </div>
+
+  <div class="form-group">
+    <%= link_to "Listar Todos", clients_path, class: "btn btn-default btn-block" %>
+  </div>
+
+<% end %>
